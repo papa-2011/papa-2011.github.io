@@ -1467,6 +1467,9 @@ footer {
 }
 
 @media screen and (max-width: 1260px) {
+    .container {
+        max-width: 1260px;
+    }
     .logo-txt {
         padding: 28px 0 0 4%;
     }
@@ -1503,6 +1506,9 @@ footer {
 }
 
 @media screen and (max-width: 1000px) {
+    .container {
+        max-width: 1000px;
+    }
     .slider-header {
         height: 85px;
     }
@@ -1575,6 +1581,9 @@ footer {
 }
 
 @media screen and (max-width: 800px) {
+    .container {
+        max-width: 800px;
+    }
     .mobile {
         background-size: 257px;
     }
@@ -1617,6 +1626,9 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+    .container {
+        max-width: 576px;
+    }
     .services {
         padding: 27px 0 41px 0;
     }
@@ -1629,7 +1641,6 @@ footer {
     .marketing-txt {
         font-size: 11px;
     }
-    
     .marketing:after {
         width: 75px;
     }
