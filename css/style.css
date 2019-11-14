@@ -72,13 +72,58 @@ input[type="checkbox"]:checked ~ .main-nav__menu {
     visibility: visible;
 }
 
-.menu__closed {
-    background-color: #fff;
+.menu__span {
+    /* background-color: #fff; */
+    /* display: block; */
+    /* margin: 6px 0; */
     display: block;
-    margin: 6px 0;
-    width: 47px;
-    height: 6px;
+    width: 32px;
+    height: 4px;
+    z-index: 1;
+    border-radius: 4px;
+    position: relative;
+    background: #fff;
+    margin-bottom: 7px;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    /* width: 47px; */
+    /* height: 6px;*/
 }
+
+
+/*                     */
+
+.menu__span:first-child {
+    transform-origin: 0% 0%;
+    transition: width, 0.5s;
+}
+
+.menu__span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+    width: 22px;
+    transition: width, 0.5s;
+}
+
+input:checked ~ label >.menu__span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, -3px);
+    width: 39px;
+    transition: width, 0.5s;
+}
+
+input:checked ~ label >.menu__span:nth-last-child(2) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+input:checked ~ label >.menu__span:nth-last-child(1) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+    width: 39px;
+}
+
+
+/*                      */
 
 menu__opened {
     background-color: #fff;
